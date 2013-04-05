@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_uninstall().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_uninstall() {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_uninstall() {
   /*
    *variable_del('upload_file_types');
    */

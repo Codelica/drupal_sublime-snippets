@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_page_build().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_page_build(&\$page) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_page_build(&\$page) {
   \$page['${1}']['${2}'] = array(
     '#markup' => t('${3}'),
     '#weight' => ${4},

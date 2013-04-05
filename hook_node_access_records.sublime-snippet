@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_node_access_records().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_access_records(\$node) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_node_access_records(\$node) {
   // We only care about the node if it has been marked private. If not, it is
   // treated just like any other node and we completely ignore it.
   /*

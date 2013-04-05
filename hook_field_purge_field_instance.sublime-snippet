@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_purge_field_instance().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_purge_field_instance(\$instance) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_purge_field_instance(\$instance) {
   db_delete('${1}')
     ->condition('id', \$instance['id'])
     ->execute();

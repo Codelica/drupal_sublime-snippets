@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_file_download_access_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_file_download_access_alter(&\$grants, \$field, \$entity_type, \$entity) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_file_download_access_alter(&\$grants, \$field, \$entity_type, \$entity) {
   // For our example module, we always enforce the rules set by node module.
   /*
    *if (isset(\$grants['node'])) {

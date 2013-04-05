@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_modules_installed().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_modules_installed(\$modules) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_modules_installed(\$modules) {
   /*
    *if (in_array('lousy_module', \$modules)) {
    *  variable_set('lousy_module_conflicting_variable', FALSE);

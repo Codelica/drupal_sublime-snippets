@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_formatter_view().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_formatter_view(\$entity_type, \$entity, \$field, \$instance, \$langcode, \$items, \$display) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_formatter_view(\$entity_type, \$entity, \$field, \$instance, \$langcode, \$items, \$display) {
   \$element = array();
   \$settings = \$display['settings'];
 

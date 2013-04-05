@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_js_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_js_alter(&\$javascript) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_js_alter(&\$javascript) {
   // Swap out jQuery to use an updated version of the library.
   /*
    *\$javascript['misc/jquery.js']['data'] = drupal_get_path('module', 'jquery_update') . '/jquery.js';

@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_aggregator_process().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_aggregator_process(\$feed) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_aggregator_process(\$feed) {
   /*
    *foreach (\$feed->items as \$item) {
    *  mymodule_save(\$item);

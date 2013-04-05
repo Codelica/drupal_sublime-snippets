@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_archiver_info().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_archiver_info() {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_archiver_info() {
   return array(
     /*
      *'tar' => array(

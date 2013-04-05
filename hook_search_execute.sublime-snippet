@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_search_execute().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_search_execute(\$keys = NULL, \$conditions = NULL) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_search_execute(\$keys = NULL, \$conditions = NULL) {
   /*
    *  // Build matching conditions
    *  \$query = db_select('search_index', 'i', array('target' => 'slave'))->extend('SearchQuery')->extend('PagerDefault');

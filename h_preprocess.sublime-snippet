@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_preprocess().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_preprocess(&\$variables, \$hook) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_preprocess(&\$variables, \$hook) {
   static \$hooks;
   ${1:/* Your code here */}
 }

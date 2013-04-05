@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_node_update().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_update(\$node) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_node_update(\$node) {
   db_update('${1}')
     ->fields(array('${2}' => ${3})
     ->condition('nid', \$node->nid)

@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_filter_info().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_filter_info() {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_filter_info() {
   \$filters['${1}'] = array(
     'title' => t('${2}'),
     'description' => t('${3}'),

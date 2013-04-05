@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_username_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_username_alter(&\$name, \$account) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_username_alter(&\$name, \$account) {
   // Display the user's uid instead of name.
   /*
    *if (isset(\$account->uid)) {

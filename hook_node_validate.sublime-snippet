@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_node_validate().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_validate(\$node, \$form, &\$form_state) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_node_validate(\$node, \$form, &\$form_state) {
   /*
    *if (isset(\$node->end) && isset(\$node->start)) {
    *  if (\$node->start > \$node->end) {

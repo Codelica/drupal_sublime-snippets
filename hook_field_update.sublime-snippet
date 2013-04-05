@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_update().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_update(\$entity_type, \$entity, \$field, \$instance, \$langcode, &\$items) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_update(\$entity_type, \$entity, \$field, \$instance, \$langcode, &\$items) {
   /*
    *if (variable_get('taxonomy_maintain_index_table', TRUE) && \$field['storage']['type'] == 'field_sql_storage' && \$entity_type == 'node') {
    *  \$first_call = &drupal_static(__FUNCTION__, array());

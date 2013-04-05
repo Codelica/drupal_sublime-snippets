@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_widget_settings_form().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_widget_settings_form(\$field, \$instance) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_widget_settings_form(\$field, \$instance) {
   \$widget = \$instance['widget'];
   \$settings = \$widget['settings'];
 

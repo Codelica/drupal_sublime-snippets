@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_stream_wrappers().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_stream_wrappers() {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_stream_wrappers() {
   return array(
      '${1}' => array(
       'name' => t('${2}'),

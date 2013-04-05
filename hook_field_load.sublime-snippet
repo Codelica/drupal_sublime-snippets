@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_load().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_load(\$entity_type, \$entities, \$field, \$instances, \$langcode, &\$items, \$age) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_load(\$entity_type, \$entities, \$field, \$instances, \$langcode, &\$items, \$age) {
   // Sample code from text.module: precompute sanitized strings so they are
   // stored in the field cache.
   /*

@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_extra_fields().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_extra_fields() {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_extra_fields() {
   \$extra['${1}']['${2}'] = array(
     'form' => array(
       '${3}' => array(

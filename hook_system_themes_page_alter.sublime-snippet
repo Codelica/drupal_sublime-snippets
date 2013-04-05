@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_system_themes_page_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_system_themes_page_alter(&\$theme_groups) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_system_themes_page_alter(&\$theme_groups) {
   foreach (\$theme_groups as \$state => &\$group) {
     foreach (\$theme_groups[\$state] as &\$theme) {
       // Add a foo link to each list of theme operations.

@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_prepare().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_prepare(\$node) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_prepare(\$node) {
   /*
    *if (\$file = file_check_upload(\$field_name)) {
    *  \$file = file_save_upload(\$field_name, _image_filename(\$file->filename, NULL, TRUE));

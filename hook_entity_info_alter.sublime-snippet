@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_entity_info_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_entity_info_alter(&\$entity_info) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_entity_info_alter(&\$entity_info) {
   // Set the controller class for nodes to an alternate implementation of the
   // DrupalEntityController interface.
   /*

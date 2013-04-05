@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_boot().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_boot() {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_boot() {
   // we need user_access() in the shutdown function. make sure it gets loaded
   /*
    *drupal_load('module', 'user');

@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_comment_unpublish().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_comment_unpublish(\$comment) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_comment_unpublish(\$comment) {
   /*
    *drupal_set_message(t('Comment: @subject has been unpublished', array('@subject' => \$comment->subject)));
    */

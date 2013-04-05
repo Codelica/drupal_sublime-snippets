@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_comment_load().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_comment_load(\$comments) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_comment_load(\$comments) {
   /*
    *\$result = db_query('SELECT cid, foo FROM {mytable} WHERE cid IN (:cids)', array(':cids' => array_keys(\$comments)));
    *foreach (\$result as \$record) {

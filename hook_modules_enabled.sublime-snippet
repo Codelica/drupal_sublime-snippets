@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_modules_enabled().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_modules_enabled(\$modules) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_modules_enabled(\$modules) {
   /*
    *if (in_array('lousy_module', \$modules)) {
    *  drupal_set_message(t('mymodule is not compatible with lousy_module'), 'error');

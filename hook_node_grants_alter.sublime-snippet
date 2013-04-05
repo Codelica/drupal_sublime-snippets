@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_node_grants_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_grants_alter(&\$grants, \$account, \$op) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_node_grants_alter(&\$grants, \$account, \$op) {
   // Our sample module never allows certain roles to edit or delete
   // content. Since some other node access modules might allow this
   // permission, we expressly remove it by returning an empty \$grants

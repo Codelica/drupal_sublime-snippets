@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_mail_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_mail_alter(&\$message) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_mail_alter(&\$message) {
   if (\$message['id'] == '${1}') {
     \$message['body'][] = "${2}";
   }

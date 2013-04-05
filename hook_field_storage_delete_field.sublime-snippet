@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_storage_delete_field().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_storage_delete_field(\$field) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_storage_delete_field(\$field) {
   // Mark all data associated with the field for deletion.
   /*
    *\$field['deleted'] = 0;

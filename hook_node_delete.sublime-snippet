@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_node_delete().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_node_delete(\$node) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_node_delete(\$node) {
   db_delete('${1}')
     ->condition('nid', \$node->nid)
     ->execute();

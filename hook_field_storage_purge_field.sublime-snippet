@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_storage_purge_field().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_storage_purge_field(\$field) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_storage_purge_field(\$field) {
   /*
    *\$table_name = _field_sql_storage_tablename(\$field);
    *\$revision_name = _field_sql_storage_revision_tablename(\$field);

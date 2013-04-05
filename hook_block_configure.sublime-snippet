@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_block_configure().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_block_configure(\$delta = '') {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_block_configure(\$delta = '') {
   // This example comes from node.module.
   /*
    *\$form = array();

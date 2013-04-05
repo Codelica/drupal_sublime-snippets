@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_filter_format_disable().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_filter_format_disable(\$format) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_filter_format_disable(\$format) {
   /*
    *mymodule_cache_rebuild();
    */

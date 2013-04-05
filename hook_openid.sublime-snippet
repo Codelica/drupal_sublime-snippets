@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_openid().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_openid(\$op, \$request) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_openid(\$op, \$request) {
   /*
    *if (\$op == 'request') {
    *  \$request['openid.identity'] = 'http://myname.myopenid.com/';

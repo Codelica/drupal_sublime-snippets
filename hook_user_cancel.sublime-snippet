@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_user_cancel().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_cancel(\$edit, \$account, \$method) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_user_cancel(\$edit, \$account, \$method) {
   switch (\$method) {
     /*
      *case 'user_cancel_block_unpublish':

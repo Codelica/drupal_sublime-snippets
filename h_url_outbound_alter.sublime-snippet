@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_url_outbound_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_url_outbound_alter(&\$path, &\$options, \$original_path) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_url_outbound_alter(&\$path, &\$options, \$original_path) {
   ${1:/* Your code here */}
 }
 ]]></content>

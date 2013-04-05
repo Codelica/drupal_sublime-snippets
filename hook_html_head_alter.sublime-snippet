@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_html_head_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_html_head_alter(&\$head_elements) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_html_head_alter(&\$head_elements) {
   foreach (\$head_elements as \$key => \$element) {
     /*
      *if (isset(\$element['#attributes']['rel']) && \$element['#attributes']['rel'] == 'canonical') {

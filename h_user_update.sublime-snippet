@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_user_update().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_update(&\$edit, \$account, \$category) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_user_update(&\$edit, \$account, \$category) {
   db_insert('${1}')
     ->fields(array(
       'uid' => \$account->uid,

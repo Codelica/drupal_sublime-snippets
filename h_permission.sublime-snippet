@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_permission().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_permission() {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_permission() {
   return array(
     '${1}' =>  array(
       'title' => t('${2}'),

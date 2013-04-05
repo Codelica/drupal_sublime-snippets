@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_update_forbid().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_update_forbid(\$field, \$prior_field, \$has_data) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_update_forbid(\$field, \$prior_field, \$has_data) {
   // A 'list' field stores integer keys mapped to display values. If
   // the new field will have fewer values, and any data exists for the
   // abandoned keys, the field will have no way to display them. So,

@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_search_access().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_search_access() {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_search_access() {
   /*
    *return user_access('access content');
    */

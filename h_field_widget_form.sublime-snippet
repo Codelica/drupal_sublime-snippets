@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_widget_form().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_widget_form(&\$form, &\$form_state, \$field, \$instance, \$langcode, \$items, \$delta, \$element) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_widget_form(&\$form, &\$form_state, \$field, \$instance, \$langcode, \$items, \$delta, \$element) {
   \$element += array(
     '#type' => ${1},
     '#default_value' => ${2},

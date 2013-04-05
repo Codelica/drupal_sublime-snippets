@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_user_presave().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_presave(&\$edit, \$account, \$category) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_user_presave(&\$edit, \$account, \$category) {
   // make sure that our form value 'mymodule_foo' is stored as 'mymodule_bar'.
   /*
    *if (isset(\$edit['mymodule_foo'])) {

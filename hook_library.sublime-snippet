@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_library().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_library() {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_library() {
   // Library One.
   /*
    *\$libraries['library-1'] = array(
@@ -49,10 +49,10 @@ function ${TM_FILENAME/([^.]*)\..*$/$1/}_library() {
     'website' => '${3}',
     'version' => '${4}',
     'js' => array(
-      drupal_get_path('module', '${TM_FILENAME/([^.]*)\..*$/$1/}') . '/${5}' => array(),
+      drupal_get_path('module', '${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}') . '/${5}' => array(),
     ),
     'css' => array(
-      drupal_get_path('module', '${TM_FILENAME/([^.]*)\..*$/$1/}') . '/${6}' => array(
+      drupal_get_path('module', '${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}') . '/${6}' => array(
         'type' => 'file',
         'media' => '${7}',
       ),

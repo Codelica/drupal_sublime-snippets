@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_prepare_view().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_prepare_view(\$entity_type, \$entities, \$field, \$instances, \$langcode, &\$items) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_prepare_view(\$entity_type, \$entities, \$field, \$instances, \$langcode, &\$items) {
   ${1:/* Your code here */}
 }
 ]]></content>

@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_attach_delete_bundle().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_attach_delete_bundle(\$entity_type, \$bundle, \$instances) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_attach_delete_bundle(\$entity_type, \$bundle, \$instances) {
   // Remove the extra weights variable information for this bundle.
   /*
    *\$extra_weights = variable_get('field_extra_weights', array());

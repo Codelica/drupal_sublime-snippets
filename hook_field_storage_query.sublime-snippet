@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_storage_query().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_storage_query(\$query) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_storage_query(\$query) {
   /*
    *  \$load_current = \$options['age'] == FIELD_LOAD_CURRENT;
    *

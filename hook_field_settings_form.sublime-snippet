@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_settings_form().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_settings_form(\$field, \$instance, \$has_data) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_settings_form(\$field, \$instance, \$has_data) {
   /*
    *\$settings = \$field['settings'];
    *\$form['max_length'] = array(

@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_image_style_save().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_image_style_save(\$style) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_image_style_save(\$style) {
   // if a module defines an image style and that style is renamed by the user
   // the module should update any references to that style.
   /*

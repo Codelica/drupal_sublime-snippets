@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_search_admin().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_search_admin() {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_search_admin() {
   // Output form for defining rank factor weights.
   /*
    *\$form['content_ranking'] = array(

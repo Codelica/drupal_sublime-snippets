@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_menu_link_insert().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_menu_link_insert(\$link) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_menu_link_insert(\$link) {
   // In our sample case, we track menu items as editing sections
   // of the site. These are stored in our table as 'disabled' items.
   /*

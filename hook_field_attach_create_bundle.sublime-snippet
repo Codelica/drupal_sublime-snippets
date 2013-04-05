@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_attach_create_bundle().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_attach_create_bundle(\$entity_type, \$bundle) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_attach_create_bundle(\$entity_type, \$bundle) {
   // When a new bundle is created, the menu needs to be rebuilt to add the
   // Field UI menu item tabs.
   /*

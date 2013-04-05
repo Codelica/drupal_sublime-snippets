@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_user_login().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_login(&\$edit, \$account) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_user_login(&\$edit, \$account) {
   // If the user has a NULL time zone, notify them to set a time zone.
   /*
    *if (!\$user->timezone && variable_get('configurable_timezones', 1) && variable_get('empty_timezone_message', 0)) {

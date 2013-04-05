@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_theme_registry_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_theme_registry_alter(&\$theme_registry) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_theme_registry_alter(&\$theme_registry) {
   ${1:/* Your code here */}
 }
 ]]></content>

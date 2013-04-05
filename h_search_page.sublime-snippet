@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_search_page().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_search_page(\$results) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_search_page(\$results) {
   \$output['prefix']['#markup'] = '<ol class="search-results">';
 
   foreach (\$results as \$entry) {

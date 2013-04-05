@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_action_info().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_action_info() {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_action_info() {
   return array(
     /*
      *'comment_unpublish_action' => array(

@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_info_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_info_alter(&\$info) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_info_alter(&\$info) {
   // Add a setting to all field types.
   /*
    *foreach (\$info as \$field_type => \$field_type_info) {

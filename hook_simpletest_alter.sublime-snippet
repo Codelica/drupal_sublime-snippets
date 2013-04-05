@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_simpletest_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_simpletest_alter(&\$groups) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_simpletest_alter(&\$groups) {
   // An alternative session handler module would not want to run the original
   // Session https handling test because it checks the sessions table in the
   // database.

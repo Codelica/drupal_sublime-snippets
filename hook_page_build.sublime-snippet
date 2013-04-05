@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_page_build().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_page_build(&\$page) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_page_build(&\$page) {
   /*
    *if (menu_get_object('node', 1)) {
    *  // We are on a node detail page. Append a standard disclaimer to the

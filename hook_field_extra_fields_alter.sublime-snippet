@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_extra_fields_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_extra_fields_alter(&\$info) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_extra_fields_alter(&\$info) {
   // Force node title to always be at the top of the list by default.
   /*
    *foreach (node_type_get_types() as \$bundle) {

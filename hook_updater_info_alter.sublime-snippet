@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_updater_info_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_updater_info_alter(&\$updaters) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_updater_info_alter(&\$updaters) {
   // Adjust weight so that the theme Updater gets a chance to handle a given
   // update task before module updaters.
   /*

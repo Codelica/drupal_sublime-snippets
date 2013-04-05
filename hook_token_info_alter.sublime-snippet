@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_token_info_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_token_info_alter(&\$data) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_token_info_alter(&\$data) {
   // Modify description of node tokens for our site.
   /*
    *\$data['tokens']['node']['nid'] = array(

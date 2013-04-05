@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_update_index().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_update_index() {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_update_index() {
   /*
    *  \$limit = (int)variable_get('search_cron_limit', 100);
    *

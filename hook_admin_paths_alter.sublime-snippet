@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_admin_paths_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_admin_paths_alter(&\$paths) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_admin_paths_alter(&\$paths) {
   // Treat all user pages as administrative.
   /*
    *\$paths['user'] = TRUE;

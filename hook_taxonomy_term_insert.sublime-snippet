@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_taxonomy_term_insert().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_taxonomy_term_insert(\$term) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_taxonomy_term_insert(\$term) {
   /*
    *if (!empty(\$term->synonyms)) {
    *  foreach (explode ("\n", str_replace("\r", '', \$term->synonyms)) as \$synonym) {

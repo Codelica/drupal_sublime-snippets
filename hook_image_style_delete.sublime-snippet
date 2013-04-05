@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_image_style_delete().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_image_style_delete(\$style) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_image_style_delete(\$style) {
   // Administrators can choose an optional replacement style when deleting.
   // Update the modules style variable accordingly.
   /*

@@ -3,8 +3,8 @@
   <content><![CDATA[/**
  * Implements hook_entity_query_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_entity_query_alter(\$query) {
-  \$query->${1} = '${TM_FILENAME/([^.]*)\..*$/$1/}_query_callback';
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_entity_query_alter(\$query) {
+  \$query->${1} = '${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_query_callback';
 }
 ]]></content>
 </snippet>

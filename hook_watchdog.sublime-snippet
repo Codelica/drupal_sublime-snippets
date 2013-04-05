@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_watchdog().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_watchdog(array \$log_entry) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_watchdog(array \$log_entry) {
   /*
    *  global \$base_url, \$language;
    *

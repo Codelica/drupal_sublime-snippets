@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_info_max_weight().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_info_max_weight(\$entity_type, \$bundle, \$context) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_info_max_weight(\$entity_type, \$bundle, \$context) {
   \$weights = array();
 
   /*

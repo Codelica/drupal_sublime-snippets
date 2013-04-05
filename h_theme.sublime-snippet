@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_theme().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_theme(\$existing, \$type, \$theme, \$path) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_theme(\$existing, \$type, \$theme, \$path) {
   return array(
     '${1}' => array(
       'render element' => '${2}',

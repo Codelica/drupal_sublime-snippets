@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_batch_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_batch_alter(&\$batch) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_batch_alter(&\$batch) {
   // If the current page request is inside the overlay, add ?render=overlay to
   // the success callback URL, so that it appears correctly within the overlay.
   /*

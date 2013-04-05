@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_user_cancel_methods_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_user_cancel_methods_alter(&\$methods) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_user_cancel_methods_alter(&\$methods) {
   // Limit access to disable account and unpublish content method.
   /*
    *\$methods['user_cancel_block_unpublish']['access'] = user_access('administer site configuration');

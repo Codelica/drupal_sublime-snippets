@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_field_language_alter().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_field_language_alter(&\$display_language, \$context) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_field_language_alter(&\$display_language, \$context) {
   // Do not apply core language fallback rules if they are disabled or if Locale
   // is not registered as a translation handler.
   /*

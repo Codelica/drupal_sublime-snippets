@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_menu_insert().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_menu_insert(\$menu) {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_menu_insert(\$menu) {
   // For example, we track available menus in a variable.
   /*
    *\$my_menus = variable_get('my_module_menus', array());

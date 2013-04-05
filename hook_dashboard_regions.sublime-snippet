@@ -3,7 +3,7 @@
   <content><![CDATA[/**
  * Implements hook_dashboard_regions().
  */
-function ${TM_FILENAME/([^.]*)\..*$/$1/}_dashboard_regions() {
+function ${TM_FILEPATH/.+(?:\/|\\)(?:themes|modules)(?:\/|\\)([a-zA-Z0-9_]+)(?:\/|\\).*/$1/}_dashboard_regions() {
   // Define a new dashboard region. Your module can also then define
   // theme_mymodule_dashboard_region() as a theme wrapper function to control
   // the region's appearance.
